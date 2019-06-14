@@ -2,14 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors');
-const env = require('./config/.env');
+require('dotenv').config();
 
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
 //prettier-ignore
-mongoose.connect(env.mongo_url, { useNewUrlParser: true }, 
+mongoose.connect(process.env.MONGO_CONFIG, { useNewUrlParser: true }, 
   err => { 
     if (err) return console.log(err); 
       console.log('Conectado ao MongoDB');
