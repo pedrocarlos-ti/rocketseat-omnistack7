@@ -59,6 +59,12 @@ There are basically three routes in this backend, they are:
 - [Socket.io](https://socket.io/)
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
+## Deploy
+
+Click and be happy!
+
+[![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/pedrocarlos-ti/rocketseat-omnistack7&branch=backend-cloud-ibm)
+
 ## License
 
 This project is licensed under the MIT License
