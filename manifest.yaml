@@ -1,8 +1,7 @@
+---
 applications:
-- path: .
-  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
-  memory: 128M
-  instances: 1
-  name: omnistack-backend
-  host: omnistack-backend
-  memory: 64M
+  - name: omnistack-backend
+    buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+    command: yarn start
+    random-route: true
+memory: 128m
