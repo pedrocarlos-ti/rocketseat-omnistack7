@@ -1,6 +1,6 @@
 # OmniStack Backend
 
-Simple Backend NodeJS with Socket.io
+Simple NodeJS Backend with Socket.io and MongoDB
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ What things you need to install the software and how to install them
 ```
 NodeJS
 Yarn or npm
-MongoDB Credentials
+MongoDB
 ```
 
 ### Installing
@@ -25,6 +25,10 @@ git@github.com:pedrocarlos-ti/rocketseat-omnistack7.git
 cd rocketseat-omnistack7
 yarn or npm install
 ```
+
+#### Remember :exclamation:
+
+Before start the backend you should config mongodb credentials and port inside .env, follow .env_sample
 
 And finally
 
@@ -42,16 +46,16 @@ There are basically three routes in this backend, they are:
 
 #### Posts
 
-| Method | Endpoint | Format        | Request                                                          | Response    | Action                                      |
-| ------ | -------- | ------------- | ---------------------------------------------------------------- | ----------- | ------------------------------------------- |
-| _GET_  | `/posts` | n/a           | n/a                                                              | n/a         | **return all posts from database **         |
-| _POST_ | `/posts` | multpart form | author <br> place <br> description <br> hashtags <br> image <br> | Post Object | **create a new post and save on database ** |
+| Method | Endpoint | Format        | Request                                                          | Response    | Action                                     |
+| ------ | -------- | ------------- | ---------------------------------------------------------------- | ----------- | ------------------------------------------ |
+| _GET_  | `/posts` | n/a           | n/a                                                              | n/a         | **return all posts from database**         |
+| _POST_ | `/posts` | multpart form | author <br> place <br> description <br> hashtags <br> image <br> | Post Object | **create a new post and save on database** |
 
 #### Like
 
-| Method | Endpoint          | Format | Request | Response    | Action                       |
-| ------ | ----------------- | ------ | ------- | ----------- | ---------------------------- |
-| _POST_ | `/posts/:id/like` | n/a    | n/a     | Post Object | **update like of the post ** |
+| Method | Endpoint          | Format | Request | Response    | Action                      |
+| ------ | ----------------- | ------ | ------- | ----------- | --------------------------- |
+| _POST_ | `/posts/:id/like` | n/a    | n/a     | Post Object | **update like of the post** |
 
 ## Built With
 
@@ -61,9 +65,17 @@ There are basically three routes in this backend, they are:
 
 ## Deploy
 
-Click and be happy!
+Click to deploy on IBM Cloud.
 
 [![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/pedrocarlos-ti/rocketseat-omnistack7&branch=backend-cloud-ibm)
+
+#### IBM Cloud backend config
+
+As run local, after Deploy in IBM Cloud, you have to config the mongodb credentials inside environment varible then go to **Time Connections** - **Environment Variables**, then add your credentials of MongoDB like image bellow and click save.
+
+![Deploy to IBM Cloud](https://i.ibb.co/1ZHrFXz/image.png)
+
+Your instance will reboot, after that will execute fine!
 
 ## License
 
